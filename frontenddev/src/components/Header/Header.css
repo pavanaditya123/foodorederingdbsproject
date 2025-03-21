@@ -23,12 +23,13 @@
     font-weight: 500;
     color: white;
     font-size: max(4.5vw, 22px);
-
+    animation: fadein 3s;
 }
 
 .header-contents p {
     color: white;
     font-size: 1vw;
+    animation: fadein 3s;
 }
 
 
@@ -40,4 +41,6 @@
     background-color: white;
     font-size: max(1vw, 13px);
     border-radius: 50px;
+    animation: fadein 3s;
 }
+
