@@ -9,7 +9,7 @@ const Fooddisplay = ({category}) => {
         Top dishes near you 
       </h2>
     </div>
-  );
+  )
 }
 
 export default Fooddisplay;
