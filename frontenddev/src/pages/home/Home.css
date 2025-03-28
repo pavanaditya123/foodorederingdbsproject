@@ -1,0 +1,44 @@
+body {
+    background: linear-gradient(135deg, #fff8f0, #eae4db);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Optional food pattern */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://www.toptal.com/designers/subtlepatterns/patterns/food.png');
+    opacity: 0.04;
+    background-repeat: repeat;
+    z-index: -1;
+  }
+  
+  /* Floating icons */
+  .floating-icons img {
+    position: absolute;
+    width: 50px;
+    opacity: 0.1;
+    animation: float 12s infinite ease-in-out;
+  }
+  
+  .floating-icons img:nth-child(1) {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+  }
+  .floating-icons img:nth-child(2) {
+    top: 60%;
+    left: 85%;
+    animation-delay: 3s;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
