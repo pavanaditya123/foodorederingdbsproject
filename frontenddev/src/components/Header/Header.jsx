@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './Header.css';
+import {useGSAP} from '@gsap/react';
+
 
 const Header = () => {
     const titleRef = useRef(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         const text = titleRef.current.textContent;
         titleRef.current.innerHTML = text
             .split("")
@@ -13,19 +15,19 @@ const Header = () => {
             .join("");
 
         gsap.from(titleRef.current.children, {
-            opacity: 0,
-            y: 50,
+            opacity:0,
+            yPercent: -50,
             duration: 1,
-            stagger: 0.05, 
+            stagger: 0.2, 
             ease: "power2.out"
         });
-    }, []);
+    }), [];
 
     return (
         <div className="header">
             <div className="header-contents">
                 <h2 ref={titleRef}>Order your favorite food</h2>
-                <p ref={titleRef}>
+                <p>
                     Choose from a diverse menu featuring a delectable array of dishes crafted with 
                     the finest ingredients and culinary expertise.
                 </p>
