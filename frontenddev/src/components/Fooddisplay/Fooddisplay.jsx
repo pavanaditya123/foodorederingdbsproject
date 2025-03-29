@@ -35,7 +35,7 @@ const Fooddisplay = ({ category }) => {
       }
     );
     return ()=>{
-      scrollTrigger.getAll.forEach(trigger=>trigger.kill());
+      ScrollTrigger.getAll.forEach(trigger=>trigger.kill());
     }
   }, [category, food_list]);
 
